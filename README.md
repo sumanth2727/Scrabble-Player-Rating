@@ -42,11 +42,16 @@ in addition to all the features representing metrics for each game (e.g. “diff
 “max_overtime_minutes”). For preprocessing, we lastly standardized the numerical columns using
 Z-scores, and encoded categorical columns using one-hot vectors.
 
+![Image Alt Text](https://github.com/sumanth2727/Scrabble-Player-Rating/blob/main/img1.png)
+
 Modeling and Evaluation
 
 We begin this section by broadly surveying several parametric and non-parametric approaches
 [4]–[6] for regression analysis. Figure 4.1 shows a table of these initial models [7], each with their RMSE
 scores on the train and test set, and the difference in between thereof:
+
+![Image Alt Text](https://github.com/sumanth2727/Scrabble-Player-Rating/blob/main/img2.png)
+
 4-1 Non parametric Models
 K-nearest neighbors (KNN) regression is an instance-based learning method. It works by storing
 all available cases and predicting the numerical target based on a similarity measure (distance functions).
@@ -56,6 +61,7 @@ The Decision Tree regressor breaks down a dataset into smaller and smaller subse
 same time an associated decision tree is incrementally developed. The final result is a tree with decision
 nodes and leaf nodes. Applied the different metrics and keep maxdepth as 10 and at that depth we get a
 somewhat good test RMSE value of about 183.2.
+
 
 Parametric Models
 
@@ -74,6 +80,8 @@ by adding multiple hidden layers and trying dropout neurons for regularization[1
 4.3a) shows the loss curve as the iterations increase [8]. Figure 4.3b shows how the model RMSE value
 changes for different alpha, yet it has an overfitted result when observing the train-test skew.
 Kaggle submission for the above model gave a result of 156.17987
+
+![Image Alt Text](https://github.com/sumanth2727/Scrabble-Player-Rating/blob/main/img3.png)
 
 Stacking Model
 
